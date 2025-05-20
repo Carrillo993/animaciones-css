@@ -1,0 +1,337 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-principal: #8b4000;
+  --color-secundario: #d2691e;
+  --color-fondo: #faf3e0;
+  --color-texto: #3b2f2f;
+  --color-boton: #c48f65;
+}
+
+/* Grid Areas */
+.site-grid {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar quienes-somos"
+    "sidebar nosotros"
+    "sidebar main"
+    "footer contacto";
+  grid-template-columns: 15rem 1fr;
+  grid-template-rows: auto auto auto auto auto auto;
+  min-height: 100vh;
+}
+
+/* Header */
+.site-header {
+  grid-area: header;
+  background-color: var(--color-principal);
+  color: var(--color-fondo);
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.menu-button {
+  display: none;
+}
+
+/* Sidebar */
+.site-sidebar {
+  grid-area: sidebar;
+  background-color: var(--color-secundario);
+  color: var(--color-fondo);
+  padding: 1rem;
+  display: block;
+  transform: none;
+}
+
+.site-sidebar nav a {
+  color: var(--color-texto);
+  text-decoration: none;
+  margin-right: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #ddd;
+  padding-left: 1rem;
+}
+
+.site-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site-sidebar nav a:hover {
+  background-color: var(--color-boton);
+  color: var(--color-fondo);
+}
+
+/* quienes somos */
+.quienes-somos {
+  position: relative;
+  grid-area: quienes-somos;
+  padding: 1rem;
+  z-index: 0;
+  overflow: hidden;
+  height: 35vh;
+}
+
+.quienes-somos::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../imgs/modelo-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.quienes-somos h2 {
+  color: var(--color-principal);
+  margin-bottom: 1rem;
+}
+.quienes-somos h3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--color-texto);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  margin-top: 3.5rem;
+}
+.quienes-somos p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--color-texto);
+  line-height: 2;
+  font-size: 1.2rem;
+}
+
+/* nosotros */
+.nosotros {
+  position: relative;
+  grid-area: nosotros;
+  /* background-color: var(--color-fondo); */
+  z-index: 0;
+  padding: 1rem;
+  overflow: hidden;
+  height: 35vh;
+}
+.nosotros::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../imgs/modelo-7.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: -1;
+}
+.nosotros h2 {
+  color: var(--color-principal);
+  margin-bottom: 1rem;
+}
+.nosotros h3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--color-texto);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  margin-top: 3.5rem;
+}
+.nosotros p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--color-texto);
+  line-height: 2;
+  font-size: 1.2rem;
+}
+
+/* Main */
+.site-main {
+  position: relative;
+  grid-area: main;
+  padding: 1rem;
+  /* background: white; */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  overflow-y: auto;
+}
+.site-main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../imgs/modelo-10.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.product {
+  background: var(--color-fondo);
+  padding: 1rem;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 350px;
+}
+.product img {
+  max-width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  /* efecto */
+  filter: grayscale(100%);               /* blanco y negro */
+  transition: filter 0.3s ease,          /* transición del color */
+  transform 0.3s ease;                   /* transición del zoom */
+  transform: scale(1);
+}
+.site-main .product:hover img {
+  filter: grayscale(0);                  /* recupera el color */
+  transform: scale(1.05);                /* ligero zoom */
+}
+.product-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.product-info h3 {
+  margin: 0.5rem 0;
+  color: var(--color-texto);
+}
+.product button {
+  background: var(--color-secundario);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.product button:hover {
+  background: var(--color-principal);
+}
+
+/* contacto */
+.contacto {
+  grid-area: contacto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--color-texto);
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 2rem 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: var(--color-fondo);
+  padding: 2rem;
+  border: 1px solid var(--color-secundario);
+  margin-bottom: 2rem;
+  height: 20vh;
+}
+
+/* Footer */
+.site-footer {
+  grid-area: footer;
+  background: var(--color-secundario);
+  color: white;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  list-style: none;
+}
+
+.site-footer ul {
+  text-decoration: none;
+  list-style: none;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .site-grid {
+    grid-template-areas:
+      "header"
+      "quienes-somos"
+      "nosotros"
+      "main"
+      "contacto"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto 1fr auto;
+  }
+
+  .site-sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--color-principal);
+    padding: 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    z-index: 1000;
+  }
+
+  .site-sidebar h2 {
+    color: var(--color-principal);
+    margin-bottom: 1rem;
+  }
+  .site-sidebar nav a {
+    color: var(--color-fondo);
+    margin-bottom: 1rem;
+  }
+
+  /* Botón hamburguesa */
+  .menu-button {
+    display: block;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    font-size: 1.5rem;
+    color: var(--color-fondo);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  /* Al marcar el checkbox, desplegamos el sidebar */
+  .menu-toggle-input:checked ~ .site-sidebar {
+    max-height: calc(100vh - 2rem);
+  }
+}

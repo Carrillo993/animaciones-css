@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienes Raices</title>
+    <!-- iconos -->
+    <script src="//code.iconify.design/1/1.0.6/iconify.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+    <div class="site-grid">
+        <!-- botnón para cuando pantalla es menor a 576px -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle-input" hidden>
+    <!-- header -->
+     <header class="site-header">
+        <div class="container"> <!-- usar para botón -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+                <path fill="currentColor" d="M40.394 28.412h-9.742l-3.839 7.239h15.67zm-4.049 13.779h-2c-.548 0-.999.45-.999 1v1.999c0 .552.451 1.001.999 1.001h2c.55 0 1.001-.449 1.001-1.001v-1.999c0-.549-.451-1-1.001-1m-6.266 0h-2.001c-.551 0-1 .45-1 1v1.999c0 .552.449 1.001 1 1.001h2.001c.55 0 .999-.449.999-1.001v-1.999c0-.549-.449-1-.999-1" />
+                <path fill="currentColor" d="M62 48.063h-1.002c.504 0 .915-.542.915-1.206c0-.662-.411-1.207-.915-1.207h-.681v-2.347h.613v-1.206h-8.965l-4.7-16.067l-.39-1.332h-3.381l-.271-1.254h.879c1.217 0 2.207-1.175 2.207-2.619s-.99-2.62-2.207-2.62H42.09L41.612 16h-2.088l-.477 2.206h-2.014c-1.217 0-2.208 1.175-2.208 2.62c0 1.443.991 2.619 2.208 2.619h.879l-.271 1.254h-8.745l-.512.945l-2.1 3.882H2s4.377 6.78 5.735 9.112c.241.413 3.564 6.509 8.792 11.362H2v12h60V50h-.671zm-5.883-4.759h3.155v2.347h-3.155zm-1.044 0v2.347h-2.068l-.446-1.525l-.24-.821h2.754zm-4.199 1.394l-2.268-.731q-.504-.328-1.045-.663h2.904zm-13.84-22.682c-.486 0-.883-.535-.883-1.19s.396-1.191.883-1.191h7.068c.485 0 .883.538.883 1.191c0 .655-.397 1.19-.883 1.19zM5.376 31.43H27.3l2.612-4.826H45.58l4.532 15.494h-4.624c-4.063-2.225-9.564-4.345-17.521-4.786c-.979-.055-3.914-.098-3.914-.098l1.941-3.371h-4.516v3.364h-2.09v-3.364h-3.634v3.364h-2.089v-3.364H9.533l2.165 3.364H9.094zm52.648 22.665H29.39c-9.182 0-16.812-10.986-19.283-14.982H24.69c13.443 0 20.053 4.471 24.879 7.736c2.578 1.743 4.613 3.12 6.85 3.12h3.035z" />
+            </svg>
+            <label for="menu-toggle" class="menu-button" aria-label="Mostrar menú">☰</label>
+            <h1>Navega Real Estate</h1>
+        </div>
+     </header>
+    <!-- sidebar -->
+    <div class="site-sidebar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+            <path fill="currentColor" d="M40.394 28.412h-9.742l-3.839 7.239h15.67zm-4.049 13.779h-2c-.548 0-.999.45-.999 1v1.999c0 .552.451 1.001.999 1.001h2c.55 0 1.001-.449 1.001-1.001v-1.999c0-.549-.451-1-1.001-1m-6.266 0h-2.001c-.551 0-1 .45-1 1v1.999c0 .552.449 1.001 1 1.001h2.001c.55 0 .999-.449.999-1.001v-1.999c0-.549-.449-1-.999-1" />
+            <path fill="currentColor" d="M62 48.063h-1.002c.504 0 .915-.542.915-1.206c0-.662-.411-1.207-.915-1.207h-.681v-2.347h.613v-1.206h-8.965l-4.7-16.067l-.39-1.332h-3.381l-.271-1.254h.879c1.217 0 2.207-1.175 2.207-2.619s-.99-2.62-2.207-2.62H42.09L41.612 16h-2.088l-.477 2.206h-2.014c-1.217 0-2.208 1.175-2.208 2.62c0 1.443.991 2.619 2.208 2.619h.879l-.271 1.254h-8.745l-.512.945l-2.1 3.882H2s4.377 6.78 5.735 9.112c.241.413 3.564 6.509 8.792 11.362H2v12h60V50h-.671zm-5.883-4.759h3.155v2.347h-3.155zm-1.044 0v2.347h-2.068l-.446-1.525l-.24-.821h2.754zm-4.199 1.394l-2.268-.731q-.504-.328-1.045-.663h2.904zm-13.84-22.682c-.486 0-.883-.535-.883-1.19s.396-1.191.883-1.191h7.068c.485 0 .883.538.883 1.191c0 .655-.397 1.19-.883 1.19zM5.376 31.43H27.3l2.612-4.826H45.58l4.532 15.494h-4.624c-4.063-2.225-9.564-4.345-17.521-4.786c-.979-.055-3.914-.098-3.914-.098l1.941-3.371h-4.516v3.364h-2.09v-3.364h-3.634v3.364h-2.089v-3.364H9.533l2.165 3.364H9.094zm52.648 22.665H29.39c-9.182 0-16.812-10.986-19.283-14.982H24.69c13.443 0 20.053 4.471 24.879 7.736c2.578 1.743 4.613 3.12 6.85 3.12h3.035z" />
+        </svg>
+        <nav>
+            <ul>
+                <li><a href="#quienes-somos">Quienes Somos</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#propiedades">Propiedades</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- quienes somos -->
+    <section class="quienes-somos" id="quienes-somos">
+        <h2>Quienes Somos</h2>
+        <h3>"Visión"</h3>
+        <p>Refleja el espíritu pionero, el enfoque estratégico, el diseño excepcional y el compromiso con la excelencia que define a Navega Real Estate desde sus inicios.</p>
+    </section>
+    <!-- nosotros  -->
+    <section class="nosotros" id="nosotros">
+          <h2>Nosotros Somos</h2>
+          <h3>"Conexión"</h3>
+          <p>Captura la esencia de unir personas con espacios únicos, de crear experiencias memorables y de generar vínculos auténticos entre visión, estilo de vida y hogar.</p>
+        </section>
+    <!-- main / propiedades-->
+    <main class="site-main" id="propiedades">
+        <!--los product responden a cada elemento a vender-->
+      <article class="product">
+        <img src="./assets/imgs/modelo-1.jpg" alt="Casa con piscina">
+        <div class="product-info">
+        <h3>Modelo Pacífico</h3>
+        </div>
+        <button>Más Información</button>
+      </article>
+      <article class="product">
+        <img src="./assets/imgs/modelo-2.jpg" alt="Casa con enredaderas">
+        <div class="product-info">
+        <h3>Casa Bosque I</h3>
+        </div>
+        <button>Más Información</button>
+      </article>
+      <article class="product">
+        <img src="./assets/imgs/modelo-3.jpg" alt="Casa amarilla">
+        <div class="product-info">
+        <h3>Casa mediterranea</h3>
+        </div>
+        <button>Más Información</button>
+      </article>
+      <article class="product">
+        <img src="./assets/imgs/modelo-4.jpg" alt="Casa tipo castillo">
+        <div class="product-info">
+        <h3>Castillo</h3>
+        </div>
+        <button>Más Información</button>
+      </article>
+      <article class="product">
+        <img src="./assets/imgs/modelo-5.jpg" alt="Mansión con jardines">
+        <div class="product-info">
+        <h3>Masión en Chicureo</h3>
+        </div>
+        <button>Más Información</button>
+      </article>
+      <article class="product">
+        <img src="./assets/imgs/modelo-6.jpg" alt="casa moderna con piscina">
+        <div class="product-info">
+        <h3>Casa moderna</h3>
+        </div>
+        <button>Más Información</button>
+      </article>
+      <article class="product">
+        <img src="./assets/imgs/modelo-7.jpg" alt="Casa estilo brutalista">
+        <div class="product-info">
+        <h3>Casa futuro IV</h3>
+        </div>
+        <button>Más Información</button>
+      </article>
+      <article class="product">
+        <img src="./assets/imgs/modelo-8.jpg" alt="Casa decente con piscina">
+        <div class="product-info">
+        <h3>Casa deserve</h3>
+        </div>
+        <button>Más Información</button>
+      </article>
+      <article class="product">
+        <img src="./assets/imgs/modelo-9.jpg" alt="Mansión iluminada">
+        <div class="product-info">
+        <h3>Mansión burlesque</h3>
+        </div>
+        <button>Más Información</button>
+      </article>
+      <article class="product">
+        <img src="./assets/imgs/modelo-10.jpg" alt="Casa tipo castillo a la orilla de un lago">
+        <div class="product-info">
+        <h3>Castillo a la orilla del lago</h3>
+        </div>
+        <button>Más Información</button>
+      </article>
+      <article class="product">
+        <img src="./assets/imgs/modelo-11.jpg" alt="Casa moderna en Huechuraba">
+        <div class="product-info">
+        <h3>Casa moderna en Huechuraba</h3>
+        </div>
+        <button>Más Información</button>
+      </article>
+      <article class="product">
+        <img src="./assets/imgs/modelo-12.jpg" alt="casa estilo parisino">
+        <div class="product-info">
+        <h3>Casa parisina</h3>
+        </div>
+        <button>Más Información</button>
+      </article>
+      <article class="product">
+        <img src="./assets/imgs/modelo-13.jpg" alt="Casa al mejor estilo del barrio San Carlos de Apoquindo">
+        <div class="product-info">
+        <h3>Casa en San Carlos de Apoquindo</h3>
+        </div>
+        <button>Más Información</button>
+      </article>
+      <article class="product">
+        <img src="./assets/imgs/modelo-14.jpg" alt="Casa con vista al mar">
+        <div class="product-info">
+        <h3>Casa en zapallar</h3>
+        </div>
+        <button>Más Información</button>
+      </article>
+      <article class="product">
+        <img src="./assets/imgs/modelo-15.jpg" alt="Castillo fortaleza">
+        <div class="product-info">
+        <h3>Castillo fortaleza</h3>
+        </div>
+        <button>Más Información</button>
+      </article>
+      <article class="product">
+        <img src="./assets/imgs/modelo-16.jpg" alt="Casa común">
+        <div class="product-info">
+        <h3>Casa modesta en La Dehesa</h3>
+        </div>
+        <button>Más Información</button>
+      </article>
+    </main>
+    <!-- contacto -->
+    <section class="contacto" id="contacto">
+        <h2>Contacto</h2>
+        <form action="#" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>  
+    <!-- footer  -->
+    <footer class="site-footer">
+        <div class="container"> <!-- aún sin uso -->
+            <ul>
+                <li><a href="contacto@NavegaRE.com">contacto@NavegaRE.com</a></li>
+                <li><a href="https://wwww.linkedin.com">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"/></svg> LinkedIn</a>
+                </li>
+                <li><a href="https://www.facebook.com"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.04c-5.5 0-10 4.49-10 10.02c0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89c1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02"/></svg> Facebook</a>
+                </li>
+                <li><a href="https://www.instagram.com"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/></svg> Instagram</a>
+                </li>
+            </ul>
+            <p>&copy; 2025 Navega Real Estate. Todos los derechos reservados.</p>
+        </div>
+    </div> <!-- cierre del div site-grid -->
+</body>
+</html>
