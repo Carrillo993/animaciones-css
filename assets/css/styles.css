@@ -211,14 +211,13 @@
   border-radius: 4px;
   margin-bottom: 1rem;
   /* efecto */
-  filter: grayscale(100%);               /* blanco y negro */
-  transition: filter 0.3s ease,          /* transición del color */
-  transform 0.3s ease;                   /* transición del zoom */
+  filter: grayscale(100%); /* blanco y negro */
+  transition: filter 0.3s ease, /* transición del color */ transform 0.3s ease; /* transición del zoom */
   transform: scale(1);
 }
 .site-main .product:hover img {
-  filter: grayscale(0);                  /* recupera el color */
-  transform: scale(1.05);                /* ligero zoom */
+  filter: grayscale(0); /* recupera el color */
+  transform: scale(1.05); /* ligero zoom */
 }
 .product-info {
   flex-grow: 1;
